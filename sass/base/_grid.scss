@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@700&display=swap');
+
+@import 'typography';
+
+
+
+body {
+   font-family: $font;
+   color: #000;
+   box-sizing: border-box;
+   // height: 100vh;
+   display: grid;
+   grid-template: 70px 90vh 1fr 2fr 120px / 1fr;
+   grid-template-areas: 
+   "nav"
+   "main"
+   "stats"
+   "prices"
+   "footer";
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+.container {
+   width: 90%;
+   margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+   font-family: $fontTitle;
+}
