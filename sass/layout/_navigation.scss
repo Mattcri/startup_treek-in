@@ -25,5 +25,24 @@ header {
    &__item {
       margin: 0 25px;
    }
-   
+   &__link {
+      position: relative;
+      &:after {
+         content: "";
+         position: absolute;
+         bottom: 0;
+         left: 6px;
+         right: 6px;
+         height: 2px;
+         background: $salmon;
+         transform: scaleX(0);
+         transition: transform 450ms ease-in-out;
+       }
+       &:hover::after {
+          transform: scaleX(1);
+       }
+   }
+   &__btn {
+      @include nav-btn;
+   }
 }

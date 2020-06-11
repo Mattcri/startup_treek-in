@@ -1,0 +1,28 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+@import '../components/buttons';
+
+.main-section {
+   grid-area: main;
+   position: relative;
+   &__hero {
+      background-image: url(../assets/images/bg-hero.svg);
+      @include background-propieties;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 10px;
+   }
+   &__content {
+      width: 35%;
+      height: 100%;
+      position: relative;
+      top: 40px;
+   }
+   &__title {
+      font-size: 2.8em;
+   }
+   &__text {
+      line-height: 25px;
+   }
+}

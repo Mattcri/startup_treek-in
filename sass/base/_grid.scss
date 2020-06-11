@@ -2,19 +2,17 @@
 
 @import 'typography';
 
-
-
 body {
    font-family: $font;
    color: #000;
    box-sizing: border-box;
    // height: 100vh;
    display: grid;
-   grid-template: 70px 90vh 1fr 2fr 120px / 1fr;
+   grid-template: 70px 90vh 1fr 2fr 100px / 1fr;
    grid-template-areas: 
    "nav"
    "main"
-   "stats"
+   "graphic"
    "prices"
    "footer";
 }
@@ -25,7 +23,7 @@ a {
 }
 
 .container {
-   width: 90%;
+   width: 85%;
    margin: 0 auto;
 }
 

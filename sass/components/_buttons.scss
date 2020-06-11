@@ -1,0 +1,18 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+// -----------------------BUTTONS-----------------------------
+@mixin nav-btn {
+   background: $btnColor;
+   padding: 8px 15px;
+   color: $white;
+   font-weight: 500;
+   border: none;
+   &:hover {
+      background: $btnHover;
+   }
+   &:focus {
+      background: $focus;
+      outline: none;
+   }
+}
+

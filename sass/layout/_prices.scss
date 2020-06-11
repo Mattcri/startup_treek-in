@@ -1,0 +1,58 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+@import '../components/buttons';
+
+.price {
+   grid-area: prices;
+   background-image: url(../assets/images/bg-price.svg);
+   @include background-propieties;
+   &__title {
+      text-align: center;
+      color: $white;
+      font-size: 2em;
+      padding: 150px 0 25px;
+   }
+}
+
+.card {
+   display: flex;
+   justify-content: center;
+   &__box {
+      height: 23rem;
+      width: 18rem;
+      background: $white;
+      padding: 25px 15px;
+      margin: 0 20px;
+      position: relative;
+   }
+   &__bottom {
+      position: absolute;
+      bottom: 35px;
+      right: 15px;
+      left: 15px;
+   }
+   &__plan {
+      font-size: 1.4em;
+      margin: 15px 0;
+   }
+   &__value {
+      font-size: 1.9em;
+      letter-spacing: 2px;
+      padding-left: 15px;
+      margin-bottom: 15px;
+      span {
+         font-size: 0.85em;
+      }
+   }
+   &__list {
+      padding-inline-start: 20px;
+   }
+   &__item {
+      margin-bottom: 10px;
+   }
+   &__btn {
+      margin-top: 10px;
+      width: 100%;
+      @include nav-btn;
+   }
+}
