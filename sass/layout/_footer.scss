@@ -17,11 +17,13 @@
    justify-content: space-between;
    @include v-small {
       flex-direction: column;
-      // justify-content: center;
+      align-items: center;
    }
    &__list-left,
    &__list-rigth {
       display: flex;
+      margin: 10px 0;
+      padding: 0;
    }
    &__item-l,
    &__item-r {
@@ -29,6 +31,9 @@
       color: $white;
    }
    &__link {
-      margin-right: 30px;
+      padding-right: 30px;
+      @include v-small {
+         padding-right: 10px;
+      }
    }
 }

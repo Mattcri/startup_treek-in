@@ -284,17 +284,25 @@ header {
 @media only screen and (max-width: 576px) {
   .footer-nav {
     flex-direction: column;
+    align-items: center;
   }
 }
 .footer-nav__list-left, .footer-nav__list-rigth {
   display: flex;
+  margin: 10px 0;
+  padding: 0;
 }
 .footer-nav__item-l, .footer-nav__item-r {
   list-style: none;
   color: #fff;
 }
 .footer-nav__link {
-  margin-right: 30px;
+  padding-right: 30px;
+}
+@media only screen and (max-width: 576px) {
+  .footer-nav__link {
+    padding-right: 10px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
