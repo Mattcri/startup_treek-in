@@ -4,7 +4,7 @@ body {
   color: #000;
   box-sizing: border-box;
   display: grid;
-  grid-template: 70px 90vh 1fr 2fr 100px/1fr;
+  grid-template: 70px 95vh 35rem 1fr 100px/1fr;
   grid-template-areas: "nav" "main" "graphic" "prices" "footer";
 }
 
@@ -45,6 +45,11 @@ header {
 .nav__item {
   margin: 0 25px;
 }
+@media only screen and (max-width: 576px) {
+  .nav__item {
+    display: none;
+  }
+}
 .nav__link {
   position: relative;
 }
@@ -76,10 +81,29 @@ header {
   background: #bababa;
   outline: none;
 }
+@media only screen and (max-width: 576px) {
+  .nav__btn {
+    display: none;
+  }
+}
+.nav__wrap-mobile-menu {
+  width: 25px;
+}
+@media only screen and (min-width: 577px) {
+  .nav__wrap-mobile-menu {
+    display: none;
+  }
+}
 
 .main-section {
   grid-area: main;
   position: relative;
+}
+@media only screen and (max-width: 576px) {
+  .main-section {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .main-section__hero {
   background-image: url(../assets/images/bg-hero.svg);
@@ -91,14 +115,31 @@ header {
   position: absolute;
   top: 10px;
 }
+@media only screen and (max-width: 576px) {
+  .main-section__hero {
+    background-size: contain;
+    top: 30px;
+  }
+}
 .main-section__content {
   width: 35%;
   height: 100%;
   position: relative;
   top: 40px;
 }
+@media only screen and (max-width: 576px) {
+  .main-section__content {
+    width: 100%;
+    top: 0;
+  }
+}
 .main-section__title {
   font-size: 2.8em;
+}
+@media only screen and (max-width: 576px) {
+  .main-section__title {
+    margin: 10px 0;
+  }
 }
 .main-section__text {
   line-height: 25px;
@@ -106,7 +147,6 @@ header {
 
 .graphic {
   grid-area: graphic;
-  margin: 2.5rem 0;
 }
 .graphic__title {
   text-align: center;
@@ -118,6 +158,13 @@ header {
   margin: 0 auto;
   display: flex;
   align-items: center;
+}
+@media only screen and (max-width: 576px) {
+  .graphic__wrap {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
 }
 .graphic__graph {
   flex: 1;
@@ -139,17 +186,28 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding: 8rem 0 5rem;
+}
+@media only screen and (max-width: 576px) {
+  .price {
+    padding: 14rem 0 4rem;
+  }
 }
 .price__title {
   text-align: center;
   color: #fff;
   font-size: 2em;
-  padding: 150px 0 25px;
 }
 
 .card {
   display: flex;
   justify-content: center;
+}
+@media only screen and (max-width: 576px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .card__box {
   height: 23rem;
@@ -158,6 +216,12 @@ header {
   padding: 25px 15px;
   margin: 0 20px;
   position: relative;
+}
+@media only screen and (max-width: 576px) {
+  .card__box {
+    margin: 20px 0;
+    width: 16rem;
+  }
 }
 .card__bottom {
   position: absolute;
@@ -207,10 +271,20 @@ header {
   display: flex;
   align-items: center;
 }
+@media only screen and (max-width: 576px) {
+  .footer {
+    justify-content: center;
+  }
+}
 
 .footer-nav {
   display: flex;
   justify-content: space-between;
+}
+@media only screen and (max-width: 576px) {
+  .footer-nav {
+    flex-direction: column;
+  }
 }
 .footer-nav__list-left, .footer-nav__list-rigth {
   display: flex;

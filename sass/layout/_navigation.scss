@@ -24,6 +24,9 @@ header {
    }
    &__item {
       margin: 0 25px;
+      @include v-small {
+         display: none;
+      }
    }
    &__link {
       position: relative;
@@ -44,5 +47,14 @@ header {
    }
    &__btn {
       @include nav-btn;
+      @include v-small {
+         display: none;
+      }
+   }
+   &__wrap-mobile-menu {
+      width: 25px;
+      @include d-none {
+         display: none;
+      }
    }
 }

@@ -7,11 +7,18 @@
    background: $footerColor;
    display: flex;
    align-items: center;
+   @include v-small {
+      justify-content: center;
+   }
 }
 
 .footer-nav {
    display: flex;
    justify-content: space-between;
+   @include v-small {
+      flex-direction: column;
+      // justify-content: center;
+   }
    &__list-left,
    &__list-rigth {
       display: flex;

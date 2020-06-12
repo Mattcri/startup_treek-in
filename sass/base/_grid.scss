@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@700&display=swap');
 
+@import '../abstracts/mixins';
 @import 'typography';
 
 body {
@@ -8,7 +9,7 @@ body {
    box-sizing: border-box;
    // height: 100vh;
    display: grid;
-   grid-template: 70px 90vh 1fr 2fr 100px / 1fr;
+   grid-template: 70px 95vh 35rem 1fr 100px / 1fr;
    grid-template-areas: 
    "nav"
    "main"
