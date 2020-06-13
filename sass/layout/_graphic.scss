@@ -4,10 +4,6 @@
 
 .graphic {
    grid-area: graphic;
-   // margin: 2.5rem 0;
-   // @include v-small{
-   //    margin: 0;
-   // }
    &__title {
       text-align: center;
       font-size: 2em;
@@ -28,6 +24,10 @@
       flex: 1;
       text-align: center;
    }
+   &__img {
+      will-change: transform;
+      animation: opacity-graph ease-in-out 6s infinite;
+   }
    &__content {
       flex: 1;
    }
@@ -36,5 +36,17 @@
    }
    &__text {
       line-height: 25px;
+   }
+}
+
+@keyframes opacity-graph {
+   0% {
+      opacity: 0.1;
+   }
+   50% {
+      opacity: 0.5;
+   }
+   100% {
+      opacity: 1;
    }
 }

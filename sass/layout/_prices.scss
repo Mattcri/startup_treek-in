@@ -31,9 +31,13 @@
       padding: 25px 15px;
       margin: 0 20px;
       position: relative;
+      will-change: transform;
       @include v-small {
          margin: 20px 0;
          width: 16rem;
+      }
+      &:hover {
+         animation: box-scale 0.8s ease-in-out forwards;
       }
    }
    &__bottom {
@@ -45,14 +49,17 @@
    &__plan {
       font-size: 1.4em;
       margin: 15px 0;
+      font-family: $font;
+      font-weight: 500;
    }
    &__value {
-      font-size: 1.9em;
+      font-size: 2em;
       letter-spacing: 2px;
       padding-left: 15px;
       margin-bottom: 15px;
+      font-family: $fontTitle;
       span {
-         font-size: 0.85em;
+         font-size: 0.95em;
       }
    }
    &__list {
@@ -61,9 +68,21 @@
    &__item {
       margin-bottom: 10px;
    }
+   &__line-bottom {
+      border: 1px solid $focus;
+   }
    &__btn {
       margin-top: 10px;
       width: 100%;
       @include nav-btn;
+   }
+}
+
+@keyframes box-scale {
+   0% {
+      transform: scale(1);
+   }
+   100%{
+      transform: scale(1.1);
    }
 }

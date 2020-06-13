@@ -14,6 +14,10 @@ header {
    justify-content: space-between;
    &__logo {
       height: 35px;
+      will-change: transform;
+      &:hover {
+         animation: logo-rotate 0.8s ease-in-out;
+      }
    }
    &__list-rigth, 
    &__list-left {
@@ -56,5 +60,11 @@ header {
       @include d-none {
          display: none;
       }
+   }
+}
+
+@keyframes logo-rotate {
+   0% {
+      transform: rotate(360deg);
    }
 }

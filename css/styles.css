@@ -35,6 +35,10 @@ header {
 }
 .nav__logo {
   height: 35px;
+  will-change: transform;
+}
+.nav__logo:hover {
+  animation: logo-rotate 0.8s ease-in-out;
 }
 .nav__list-rigth, .nav__list-left {
   display: flex;
@@ -95,6 +99,11 @@ header {
   }
 }
 
+@keyframes logo-rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+}
 .main-section {
   grid-area: main;
   position: relative;
@@ -120,6 +129,10 @@ header {
     background-size: contain;
     top: 30px;
   }
+}
+.main-section__hero img {
+  position: absolute;
+  top: -50px;
 }
 .main-section__content {
   width: 35%;
@@ -170,6 +183,10 @@ header {
   flex: 1;
   text-align: center;
 }
+.graphic__img {
+  will-change: transform;
+  animation: opacity-graph ease-in-out 6s infinite;
+}
 .graphic__content {
   flex: 1;
 }
@@ -180,6 +197,17 @@ header {
   line-height: 25px;
 }
 
+@keyframes opacity-graph {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .price {
   grid-area: prices;
   background-image: url(../assets/images/bg-price.svg);
@@ -216,12 +244,16 @@ header {
   padding: 25px 15px;
   margin: 0 20px;
   position: relative;
+  will-change: transform;
 }
 @media only screen and (max-width: 576px) {
   .card__box {
     margin: 20px 0;
     width: 16rem;
   }
+}
+.card__box:hover {
+  animation: box-scale 0.8s ease-in-out forwards;
 }
 .card__bottom {
   position: absolute;
@@ -232,21 +264,27 @@ header {
 .card__plan {
   font-size: 1.4em;
   margin: 15px 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
 }
 .card__value {
-  font-size: 1.9em;
+  font-size: 2em;
   letter-spacing: 2px;
   padding-left: 15px;
   margin-bottom: 15px;
+  font-family: "Raleway", sans-serif;
 }
 .card__value span {
-  font-size: 0.85em;
+  font-size: 0.95em;
 }
 .card__list {
   padding-inline-start: 20px;
 }
 .card__item {
   margin-bottom: 10px;
+}
+.card__line-bottom {
+  border: 1px solid #bababa;
 }
 .card__btn {
   margin-top: 10px;
@@ -265,6 +303,14 @@ header {
   outline: none;
 }
 
+@keyframes box-scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
 .footer {
   grid-area: footer;
   background: #221d23;
